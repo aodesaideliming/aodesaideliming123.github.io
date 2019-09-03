@@ -6,7 +6,7 @@ permalink: /about/
 
 Some information about you!
 
-### More Information about me
+### More Information 
 
 A place to share my ideas!
 

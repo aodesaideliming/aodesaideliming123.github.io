@@ -145,8 +145,8 @@ uint128 b = 2.5 + a + 0.5;
 枚举（Enums）
 
 在Solidity中，枚举可以用来自定义类型。它可以显示的转换与整数进行转换，但不能进行隐式转换。显示的转换会在运行时检查数值范围，如果不匹配，将会引起异常。枚举类型应至少有一名成员。下面是一个枚举的例子：
-pragma solidity ^0.4.0;
 
+pragma solidity ^0.4.0;
 contract test {
     enum ActionChoices { GoLeft, GoRight, GoStraight, SitStill }
     ActionChoices choice;

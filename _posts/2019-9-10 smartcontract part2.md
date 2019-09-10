@@ -145,3 +145,27 @@ uint128 b = 2.5 + a + 0.5;
 枚举（Enums）
 
 在Solidity中，枚举可以用来自定义类型。它可以显示的转换与整数进行转换，但不能进行隐式转换。显示的转换会在运行时检查数值范围，如果不匹配，将会引起异常。枚举类型应至少有一名成员。下面是一个枚举的例子：
+pragma solidity ^0.4.0;
+
+contract test {
+    enum ActionChoices { GoLeft, GoRight, GoStraight, SitStill }
+    ActionChoices choice;
+    ActionChoices constant defaultChoice = ActionChoices.GoStraight;
+
+    function setGoStraight() {
+        choice = ActionChoices.GoStraight;
+    }
+
+    // Since enum types are not part of the ABI, the signature of "getChoice"
+    // will automatically be changed to "getChoice() returns (uint8)"
+    // for all matters external to Solidity. The integer type used is just
+    // large enough to hold all enum values, i.e. if you have more values,
+    // `uint16` will be used and so on.
+    function getChoice() returns (ActionChoices) {
+        return choice;
+    }
+
+    function getDefaultChoice() returns (uint) {
+        return uint(defaultChoice);
+    }
+}

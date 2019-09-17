@@ -6,6 +6,7 @@ title: 智能合约part2！
 这里首先介绍一个solidity在线编译网站 https://ethereum.github.io/browser-solidity/#optimize=false&version=soljson-v0.4.24+commit.e67f0147.js ，你可以在上面在线编译自己的合约，检查语法错误等。
 
 接下来我会介绍一下合约的基础语法：
+
 类型
 
 Solidity是一种静态类型语言，意味着每个变量（本地或状态变量）需要在编译时指定变量的类型（或至少可以推倒出类型）。Solidity提供了一些基本类型可以用来组合成复杂类型。

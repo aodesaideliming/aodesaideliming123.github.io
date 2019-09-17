@@ -5,7 +5,7 @@ title: 智能合约part2！
 在了解完为什么要学习智能合约之后，我们开始学习智能合约的基本语法。
 这里首先介绍一个solidity在线编译网站 https://ethereum.github.io/browser-solidity/#optimize=false&version=soljson-v0.4.24+commit.e67f0147.js ，你可以在上面在线编译自己的合约，检查语法错误等。
 
-
+接下来我会介绍一下合约的基础语法：
 类型
 
 Solidity是一种静态类型语言，意味着每个变量（本地或状态变量）需要在编译时指定变量的类型（或至少可以推倒出类型）。Solidity提供了一些基本类型可以用来组合成复杂类型。
@@ -146,26 +146,4 @@ uint128 b = 2.5 + a + 0.5;
 
 在Solidity中，枚举可以用来自定义类型。它可以显示的转换与整数进行转换，但不能进行隐式转换。显示的转换会在运行时检查数值范围，如果不匹配，将会引起异常。枚举类型应至少有一名成员。下面是一个枚举的例子：
 
-pragma solidity ^0.4.0;
-contract test {
-    enum ActionChoices { GoLeft, GoRight, GoStraight, SitStill }
-    ActionChoices choice;
-    ActionChoices constant defaultChoice = ActionChoices.GoStraight;
-
-    function setGoStraight() {
-        choice = ActionChoices.GoStraight;
-    }
-
-    // Since enum types are not part of the ABI, the signature of "getChoice"
-    // will automatically be changed to "getChoice() returns (uint8)"
-    // for all matters external to Solidity. The integer type used is just
-    // large enough to hold all enum values, i.e. if you have more values,
-    // `uint16` will be used and so on.
-    function getChoice() returns (ActionChoices) {
-        return choice;
-    }
-
-    function getDefaultChoice() returns (uint) {
-        return uint(defaultChoice);
-    }
-}
+![](https://ftp.bmp.ovh/imgs/2019/09/caf51df0b47a40b8.png)

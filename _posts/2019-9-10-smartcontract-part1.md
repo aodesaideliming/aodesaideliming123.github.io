@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 智能合约（smartcontract） part1
+title: 智能合约part1
 ---
 大家好！今天为大家带来的是智能合约的学习part1，这边的合约是基于以太坊的智能合约，也是目前最普遍使用的智能合约之一，语言是solidity。
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 智能合约part2！
+title: 智能合约part2
 ---
 在了解完为什么要学习智能合约之后，我们开始学习智能合约的基本语法。
 这里首先介绍一个solidity在线编译网站 https://ethereum.github.io/browser-solidity/#optimize=false&version=soljson-v0.4.24+commit.e67f0147.js ，你可以在上面在线编译自己的合约，检查语法错误等。

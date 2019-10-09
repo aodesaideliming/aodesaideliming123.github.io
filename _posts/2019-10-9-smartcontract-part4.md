@@ -38,10 +38,7 @@ string public _name;
 
 5.msg.sender：
 
-它是全局变量，可以被所有函数调用，它指的是当前调用者（或智能合约）的address。当部署合约时，msg.sender是合约的所有者，如果合约中定义了一个名为“owner”的变量，则可以为其分配值（地址）。
-常用的代码：address owner = msg.sender 
-此时，变量“owner”将始终具有最初部署合约的人的地址，意味着是合约的所有者。分析这样一行合约代码：owner.transfer(msg.value)，这里如果调用了回退函数
-（fallback函数），那么msg.value将在owner的地址传输。(实现形式是只允许第一次也就是合约创建时才能调用，之后都无法被调用，所以可以一直保持创建者的地址)。
+它是全局变量，可以被所有函数调用，它指的是当前调用者（或智能合约）的address。当部署合约时，msg.sender是合约的所有者，如果合约中定义了一个名为“owner”的变量，则可以为其分配值（地址）。常用的代码：address owner = msg.sender 。此时，变量“owner”将始终具有最初部署合约的人的地址，意味着是合约的所有者。分析这样一行合约代码：owner.transfer(msg.value)，这里如果调用了回退函数（fallback函数），那么msg.value将在owner的地址传输。(实现形式是只允许第一次也就是合约创建时才能调用，之后都无法被调用，所以可以一直保持创建者的地址)。
 
 6.Constant关键字：
 
